@@ -30,7 +30,7 @@ npm install
 
 ## Run server
 ```bash
-node server.js --watch
+node .\src\server.js --watch
 ```
 Server will initialize on port port 3000 by default. If you want to set a different port, create a .env file with the variable:
 ```bash

@@ -5,12 +5,12 @@ app.use(express.json())
 
 app.post('/calc', (req, res) => {
     const { ethConsume, gasConsume, ethPrice, gasPrice } = req.body
-    
+
     if (!ethConsume || !gasConsume || !ethPrice || !gasPrice) {
-        res.status(400).json({"error" : "all atributes are necessary"})
+        res.status(400).json({ "error": "all atributes are necessary" })
     }
 
-    const costForKmGas = gasPrice / gasConsume 
+    const costForKmGas = gasPrice / gasConsume
     const costForKmEth = ethPrice / ethConsume
 
     let mostEfficentFuel = ''
@@ -23,7 +23,7 @@ app.post('/calc', (req, res) => {
         mostEfficentFuel = "Equal consumption on both fuels"
     }
 
-    console.log(mostEfficentFuel, costForKmGas,costForKmEth)
+    console.log(mostEfficentFuel, costForKmGas, costForKmEth)
 
     res.send({
         "costForKmGas": costForKmGas,
