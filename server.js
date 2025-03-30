@@ -1,7 +1,6 @@
 import express from 'express'
 
 const app = express()
-
 app.use(express.json())
 
 app.post('/calc', (req, res) => {
@@ -32,7 +31,6 @@ app.post('/calc', (req, res) => {
         "costForKmEth": costForKmEth,
         "mostEfficentFuel": mostEfficentFuel
     })
-    
 })
 
 const PORT = process.env.PORT || 3000;
