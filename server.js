@@ -10,7 +10,6 @@ app.post('/calc', (req, res) => {
         res.status(400).json({"error" : "all atributes are necessary"})
     }
 
-    //Getting cost for km with both fuels
     const costForKmGas = gasPrice / gasConsume 
     const costForKmEth = ethPrice / ethConsume
 
