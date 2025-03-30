@@ -1,4 +1,4 @@
-<center><img src="https://github.com/RamonSFR/GasApp/blob/main/src/assets/images/logo.png?raw=true" width="320px"></center>
+<p align="center"><img src="https://github.com/RamonSFR/GasApp/blob/main/src/assets/images/logo.png?raw=true" width="320px"></p>
 
 # API
 GASAPP API is a backend service to calculate the most efficient fuel between gasoline and ethanol in flex vehicles
