@@ -3,7 +3,7 @@ import express from 'express'
 const app = express()
 app.use(express.json())
 
-app.post('/calc', (req, res) => {
+app.get('/calc', (req, res) => {
     const { ethConsume, gasConsume, ethPrice, gasPrice } = req.body
 
     if (!ethConsume || !gasConsume || !ethPrice || !gasPrice) {
@@ -22,8 +22,6 @@ app.post('/calc', (req, res) => {
     } else {
         mostEfficentFuel = "Equal consumption on both fuels"
     }
-
-    console.log(mostEfficentFuel, costForKmGas, costForKmEth)
 
     res.send({
         "costForKmGas": costForKmGas,
