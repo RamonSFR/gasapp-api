@@ -5,8 +5,8 @@ import { rateLimit } from 'express-rate-limit'
 const app = express()
 
 const limiter = rateLimit({
-	windowMs: 15 * 60 * 1000,
-	limit: 50,
+    windowMs: 15 * 60 * 1000,
+    limit: 15,
 })
 
 app.use(limiter)
