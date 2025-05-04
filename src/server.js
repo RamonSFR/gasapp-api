@@ -1,7 +1,17 @@
 import express from 'express'
+import { rateLimit } from 'express-rate-limit'
+
 
 const app = express()
+
+const limiter = rateLimit({
+	windowMs: 15 * 60 * 1000,
+	limit: 50,
+})
+
+app.use(limiter)
 app.use(express.json())
+
 
 app.get('/calc', (req, res) => {
     const { ethConsume, gasConsume, ethPrice, gasPrice } = req.body
