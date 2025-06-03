@@ -13,7 +13,7 @@ app.use(limiter)
 app.use(express.json())
 
 
-app.get('/calc', (req, res) => {
+app.post('/calc', (req, res) => {
     const { ethConsume, gasConsume, ethPrice, gasPrice } = req.body
 
     if (!ethConsume || !gasConsume || !ethPrice || !gasPrice) {

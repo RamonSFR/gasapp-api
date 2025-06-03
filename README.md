@@ -38,7 +38,7 @@ Server will initialize on port port 3000 by default. If you want to set a differ
 ```
 
 ## Endpoints
-<h3>GET /calc</h3>
+<h3>POST /calc</h3>
 <h4>Request:</h4>
 
 ```bash
